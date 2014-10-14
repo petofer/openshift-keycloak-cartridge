@@ -62,29 +62,3 @@ touch ${OPENSHIFT_WILDFLY_DIR}/env/OPENSHIFT_WILDFLY_CLUSTER
 #        update-configuration java7
 #    fi
 #popd > /dev/null
-
-# Configure Keycloak database
-
-if ( env | grep '^OPENSHIFT_MYSQL_VERSION=' &>/dev/null ); then
-    sed -i 's|java:jboss/datasources/KeycloakDS|java:jboss/datasources/MySQLDS|g' ${OPENSHIFT_WILDFLY_DIR}/standalone/configuration/keycloak-server.json
-
-    client_result ""
-    client_result "Keycloak configured to MySQL"
-    client_result ""
-elif ( env | grep '^OPENSHIFT_POSTGRESQL_VERSION=' &>/dev/null ); then
-    sed -i 's|java:jboss/datasources/KeycloakDS|java:jboss/datasources/PostgreSQLDS|g' ${OPENSHIFT_WILDFLY_DIR}/standalone/configuration/keycloak-server.json
-
-    client_result ""
-    client_result "Keycloak configured to PostgreSQL"
-    client_result ""
-elif ( env | grep '^OPENSHIFT_MONGODB_DB_HOST=' &>/dev/null ); then
-    cp ${OPENSHIFT_WILDFLY_DIR}/standalone/configuration/keycloak-server.mongo.json ${OPENSHIFT_WILDFLY_DIR}/standalone/configuration/keycloak-server.json
-
-    client_result ""
-    client_result "Keycloak configured to MongoDB"
-    client_result ""
-else
-    client_result ""
-    client_result "Keycloak configured to H2"
-    client_result ""
-fi

@@ -1,0 +1,4 @@
+#!/bin/bash -eu
+
+mv ${OPENSHIFT_WILDFLY_DIR}/standalone/configuration/keycloak-server.json ${OPENSHIFT_WILDFLY_DIR}/standalone/configuration/keycloak-server.jpa.json
+cp ${OPENSHIFT_WILDFLY_DIR}/standalone/configuration/keycloak-server.mongo.json ${OPENSHIFT_WILDFLY_DIR}/standalone/configuration/keycloak-server.json
