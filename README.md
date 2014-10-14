@@ -4,6 +4,20 @@ You can build a gear using this cartridge with the following command:
 
 	rhc app create keycloak http://cartreflect-claytondev.rhcloud.com/github/keycloak/openshift-keycloak-cartridge
 	
+By default the gear will use the H2 database, but if you add the MySQL or PostgreSQL add-on gears those will be used instead.
+
+For MySQL create the gear with:
+
+	rhc app create keycloak http://cartreflect-claytondev.rhcloud.com/github/keycloak/openshift-keycloak-cartridge mysql-5.5
+
+For PostgreSQL create the gear with:
+
+	rhc app create keycloak http://cartreflect-claytondev.rhcloud.com/github/keycloak/openshift-keycloak-cartridge postgresql-9.2
+
+For MongoDB create the gear with:
+
+	rhc app create keycloak http://cartreflect-claytondev.rhcloud.com/github/keycloak/openshift-keycloak-cartridge mongodb-2.4
+
 It will take a few minutes to build, so be patient.
 
 ## Thanks to the following:

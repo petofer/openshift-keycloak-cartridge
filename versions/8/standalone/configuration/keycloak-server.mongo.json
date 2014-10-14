@@ -4,18 +4,18 @@
     },
 
     "eventsStore": {
-        "provider": "jpa",
-        "jpa": {
+        "provider": "mongo",
+        "mongo": {
             "exclude-events": [ "REFRESH_TOKEN" ]
         }
     },
 
     "realm": {
-        "provider": "jpa"
+        "provider": "mongo"
     },
 
     "user": {
-        "provider": "jpa"
+        "provider": "mongo"
     },
 
     "userSessions": {
@@ -63,9 +63,11 @@
         "interval": 900
     },
 
-    "connectionsJpa": {
+    "connectionsMongo": {
         "default": {
-            "dataSource": "java:jboss/datasources/KeycloakDS",
+            "host": "${env.OPENSHIFT_MONGODB_DB_HOST}",
+            "user": "${env.OPENSHIFT_MONGODB_DB_USERNAME}",
+            "password": "${env.OPENSHIFT_MONGODB_DB_PASSWORD}",
             "databaseSchema": "update"
         }
     }
