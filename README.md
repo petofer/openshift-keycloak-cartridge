@@ -2,7 +2,7 @@
 
 You can build a gear using this cartridge with the following command:
 
-	rhc app create keycloak http://cartreflect-claytondev.rhcloud.com/github/keycloak/openshift-keycloak-cartridge
+	rhc app create keycloak http://cartreflect-claytondev.rhcloud.com/github/stianst/openshift-keycloak-cartridge?commit=1.1.x
 	
 It will take a few minutes to build, so be patient.
 
