@@ -1,0 +1,114 @@
+body {
+  padding-top: 10px;
+  padding-bottom: 0px;
+  background-color: #eee;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 5px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.info {
+  max-width: 330px;
+  padding: 0px;
+  margin: 0 auto;
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.sign-in-title {
+  width:100px;
+  padding: 5px;
+  margin: 0 auto;
+}
+
+
+@media (max-height: 592px) {
+	.main-image {
+		display:none;
+	}
+}
+
+@media (min-height: 593px) {
+	.main-image {
+		font-size: 68pt;
+		color: #333;
+		padding-bottom: 10px;
+	}
+}
+
+span.registration {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display:inline-block;
+}
+
+span.signinwith {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display:inline-block;
+}
+
+.icon-frame {
+	display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    background: #D2D2D2;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.social-images {
+	color: #333;
+}
+
+.social-providers {
+  width:260px;
+  padding: 5px;
+  margin: 0 auto;
+}
+
+.registration-form-fields {
+  max-width: 330px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.message-panel {
+  max-width: 330px;
+  margin: 0 auto 10px;
+}
