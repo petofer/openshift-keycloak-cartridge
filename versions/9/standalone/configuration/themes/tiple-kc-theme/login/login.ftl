@@ -19,7 +19,7 @@
             	<span class="registration"><a href="${url.loginPasswordResetUrl}">${msg("doForgotPassword")}</a></span>
                 </#if>            
         		<#if realm.password && realm.registrationAllowed>
-                <br/><span class="registration">${msg("noAccount")}</span>
+                <br/><span class="signinwith">${msg("noAccount")}</span>
                 <a class="btn btn-lg btn-info btn-block" href="${url.registrationUrl}">${msg("doRegister")}</a>
         		</#if>
             </div>
